@@ -20,3 +20,4 @@ doc/
 *.swp
 *~
 .project
+bundler_stubs/
