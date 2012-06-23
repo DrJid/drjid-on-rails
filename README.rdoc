@@ -4,10 +4,14 @@ Here's my website link. Don't click on it... It's under huge construction.
 Right now.. it's just a countdown timer for a special event in my life.
 {maijid.com}[http://maijid.com/]
 
+== Where is this? 
+This site is currently deployed here
+{DrJid-On-Rails}[https://drjid-on-rails.herokuapp.com/]
 
 == What am I doing here? 
 
-I'll be experimenting with Rails within this time period. However, I do 
+I'll be experimenting with Rails within this time period using Michale Hartl's 
+{tutorial}[http://ruby.railstutorial.org]. However, I do 
 alot of iOS development. Here's an app I have worked on in the past.
 {Glicious}[http://itunes.apple.com/us/app/g-licious/id523738999?mt=8]
 
