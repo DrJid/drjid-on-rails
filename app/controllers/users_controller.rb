@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   	@user = User.new(params[:user])
   	if @user.save
   		#Handle successful save
+      sign_in @user
   		flash[:success] = "Welcome to DrJid's first Rails App!"
   		redirect_to @user #We can omit user_path
   	else

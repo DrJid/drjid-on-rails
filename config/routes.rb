@@ -1,12 +1,18 @@
 SampleApp::Application.routes.draw do
 
   resources :users
+  resources :sessions, only: [:new, :create, :destroy] #Since we have no need to edit or show, we restrict them. 
 
   root to: 'static_pages#home'
+
+  match '/signin', to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete #This via delete tells it that it should be invoked using an HTTP DELETE request  
   match '/signup', to: 'users#new'
+
   match '/help', to: 'static_pages#help'
   match '/about', to: 'static_pages#about' #We SHOULD use match since it's conventional but get works just as well
   match '/contact', to: 'static_pages#contact'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
