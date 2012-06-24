@@ -30,6 +30,11 @@ class User < ActiveRecord::Base
 
   validates :password_confirmation, presence: true
 
+  def feed
+    #Prelim
+    Micropost.where("user_id = ?", id)
+  end
+
   private
 
 	  def create_remember_token
