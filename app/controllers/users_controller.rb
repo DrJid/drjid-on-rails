@@ -8,11 +8,6 @@ class UsersController < ApplicationController
     @users = User.paginate(page: params[:page])
   end
 
-  def show
-  	#use Params to retrieve the user id. 
-  	@user = User.find(params[:id])
-  end
-
   def new
   	#Will have to put @user in here at some point. 
   	@user = User.new
@@ -51,6 +46,12 @@ class UsersController < ApplicationController
     User.find(params[:id]).destroy
     flash[:success] = "#{name} destroyed."
     redirect_to users_path
+  end
+
+  def show
+    #use Params to retrieve the user id. 
+    @user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
 
   private
