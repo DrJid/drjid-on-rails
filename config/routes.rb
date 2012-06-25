@@ -1,8 +1,15 @@
 SampleApp::Application.routes.draw do
 
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+
   resources :sessions, only: [:new, :create, :destroy] #Since we have no need to edit or show, we restrict them. 
   resources :microposts, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
+
   
   root to: 'static_pages#home'
 
