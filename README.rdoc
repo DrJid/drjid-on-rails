@@ -7,6 +7,7 @@ Right now.. it's just a countdown timer for a special event in my life.
 == Where is this? 
 This site is currently deployed here
 {DrJid-On-Rails}[https://drjid-on-rails.herokuapp.com/]
+PS: It might be down... 
 
 == What am I doing here? 
 
